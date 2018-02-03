@@ -1178,7 +1178,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 0.2em;
 	}
 
 	.date {
@@ -1255,29 +1255,78 @@
 
 /* Forms */
 
+	form {
+		margin: 0 auto;
+		width: 70%;
+		text-align: center;
+	}
+
 	form label {
 		display: block;
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 0.04em;
 		color: #404248;
-		margin: 0 0 1em 0;
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
 
+	label{
+		display: inline-block;
+    vertical-align: top;
+		text-align: center;
+	}
+
+
+
+	.notification_time{
+		float: left;
+		margin: 10px 1% 40px 1%;
+		width: 23%;
+		border: solid 1px #999;
+		border-radius: 10px;
+	}
+
+	.payment_type{
+		float: left;
+		margin: 10px 1% 40px 1%;
+		width: 48%;
+		border: solid 1px #999;
+		border-radius: 10px;
+	}
+
+	.notification_type{
+		float: left;
+		margin: 10px 3% 40px 3%;
+		width: 44%;
+		border: solid 1px #999;
+		border-radius: 10px;
+		padding: 1%;
+	}
+
+	.payment_amount{
+		font-size: 1.9em;
+		text-transform: lowercase;
+		font-weight: 200;
+	}
+
+
+
 	form input[type="text"],
+	form input[type="tel"],
 	form input[type="email"],
 	form input[type="password"],
 	form select,
 	form textarea {
 		-webkit-appearance: none;
 		display: block;
-		width: 100%;
+		width: 60%;
 		border-radius: 8px;
 		border: solid 1px #eee;
+		margin: 0 auto;
 	}
 
 	form input[type="text"]:focus,
+	form input[type="tel"]:focus,
 	form input[type="email"]:focus,
 	form input[type="password"]:focus,
 	form select:focus,
@@ -1286,6 +1335,7 @@
 	}
 
 	form input[type="text"],
+	form input[type="tel"],
 	form input[type="email"],
 	form input[type="password"] {
 		line-height: 3em;
