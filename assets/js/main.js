@@ -21,6 +21,26 @@
 		});
 
 	$(function() {
+		$(".sms_notification").hide();
+		$(".email_notification").hide();
+		$(".all_notification").hide();
+
+		$("#email_choice").click(function(){
+			$(".all_notification").show();
+			$("#sms_choice").css({'background-color': '#fff'});
+			$(this).css({'background-color': '#ccffff'});
+			$(".sms_notification").hide();
+			$(".email_notification").show();
+
+		});
+		$("#sms_choice").click(function(){
+			$(".all_notification").show();
+			$("#email_choice").css({'background-color': '#fff'});
+			$(this).css({'background-color': '#ccffff'});
+			$(".email_notification").hide();
+			$(".sms_notification").show();
+
+		});
 
 		var	$window = $(window),
 			$body = $('body');
