@@ -14,7 +14,7 @@
 							<a href="powiadomienie.php" class="button big">Ustaw<br />powiadomienie</a>
 							<br /><br /><br />
 							<p>Twój sklep jest otwarty w niedzielę wolną od handlu?</p>
-							<a href="#" class="button big">Dodaj sklep<br />do naszej bazy</a>
+							<a href="dodaj_sklep.php" class="button big">Dodaj sklep<br />do naszej bazy</a>
 						</div>
 					</div>
 				</div>
