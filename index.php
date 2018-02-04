@@ -13,6 +13,9 @@
 							<p>Chcesz wiedzieć w którą niedzielę sklepy będą zamknięte?</p>
 							<a href="powiadomienie.php" class="button big">Ustaw<br />powiadomienie</a>
 							<br /><br /><br />
+							<p>Chcesz zrobić zakupy w niedzielę wolną od handlu?</p>
+							<a href="sklepy.php" class="button big">Znajdź sklep<br />w twojej okolicy</a>2
+							<br /><br /><br />
 							<p>Twój sklep jest otwarty w niedzielę wolną od handlu?</p>
 							<a href="dodaj_sklep.php" class="button big">Dodaj sklep<br />do naszej bazy</a>
 						</div>
