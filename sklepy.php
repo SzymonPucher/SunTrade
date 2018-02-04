@@ -27,7 +27,7 @@
 														<p>Podaj miasto</p>
 														<input type="text" name="city">
 													<footer>
-														<a class="button icon fa-info-circle">szukaj</a>
+														<a class="button">szukaj</a>
 													</footer>
 												</section>
 
@@ -35,7 +35,7 @@
 														<h2>Mam sklep</h2>
 														Twój sklep jest otwarty w niedzielę wolną od handlu?
 													<footer>
-														<a href="dodaj_sklep.php" class="button icon fa-info-circle">Dodaj twój sklep.</a>
+														<a href="dodaj_sklep.php" class="button">Dodaj twój sklep.</a>
 													</footer>
 												</section>
 
