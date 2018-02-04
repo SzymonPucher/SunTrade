@@ -20,10 +20,17 @@
                     </header>
                     <form>
                       Nazwa sklepu:
-                      <input type="email" name="email" placeholder="Podaj nazwę sklepu"><br/>
-
+                      <input type="text" name="shop_name" placeholder="Podaj nazwę sklepu">
+                      Godziny otwarcia w niedziele wolne od handlu:<br />
+                      Otwarte od: <input type="time" name="open_from" placeholder="Podaj godzinę otwarcia">
+                      do: <input type="time" name="open_from" placeholder="Podaj godzinę otwarcia"><br />
+                      Adres:
+                      <input type="text" name="street" placeholder="Podaj adres">
+                      Miasto:
+                      <input type="text" name="town" placeholder="Podaj nazwę miasta">
                       <button type="submit" onclick="alert('Dodano sklep do bazy!')">Dodaj sklep</button>
                     </form>
+
                   </article>
               </div>
             </div>
