@@ -20,26 +20,74 @@
 			}
 		});
 
+	var color1 = "#ccffff";
+
 	$(function() {
-		$(".sms_notification").hide();
-		$(".email_notification").hide();
-		$(".all_notification").hide();
+		$("#sms_form").hide();
+		$("#email_form").hide();
 
 		$("#email_choice").click(function(){
-			$(".all_notification").show();
 			$("#sms_choice").css({'background-color': '#fff'});
-			$(this).css({'background-color': '#ccffff'});
-			$(".sms_notification").hide();
-			$(".email_notification").show();
-
+			$(this).css({'background-color': color1});
+			$("#sms_form").hide();
+			$("#email_form").show();
 		});
-		$("#sms_choice").click(function(){
-			$(".all_notification").show();
-			$("#email_choice").css({'background-color': '#fff'});
-			$(this).css({'background-color': '#ccffff'});
-			$(".email_notification").hide();
-			$(".sms_notification").show();
 
+		$("#sms_choice").click(function(){
+			$("#email_choice").css({'background-color': '#fff'});
+			$(this).css({'background-color': color1});
+			$("#email_form").hide();
+			$("#sms_form").show();
+		});
+		// Email notification time color change
+		$("#Fri_9_email").click(function(){
+			$(".notification_time_email").css({'background-color': '#fff'});
+			$("#Fri9Email_box").css({'background-color': color1});
+		});
+
+		$("#Fri_16_email").click(function(){
+			$(".notification_time_email").css({'background-color': '#fff'});
+			$("#Fri16Email_box").css({'background-color': color1});
+		});
+
+		$("#Sat_9_email").click(function(){
+			$(".notification_time_email").css({'background-color': '#fff'});
+			$("#Sat9Email_box").css({'background-color': color1});
+		});
+
+		$("#Sat_16_email").click(function(){
+			$(".notification_time_email").css({'background-color': '#fff'});
+			$("#Sat16Email_box").css({'background-color': color1});
+		});
+		// Sms notification time color change
+		$("#Fri_9_sms").click(function(){
+			$(".notification_time_sms").css({'background-color': '#fff'});
+			$("#Fri9Sms_box").css({'background-color': color1});
+		});
+
+		$("#Fri_16_sms").click(function(){
+			$(".notification_time_sms").css({'background-color': '#fff'});
+			$("#Fri16Sms_box").css({'background-color': color1});
+		});
+
+		$("#Sat_9_sms").click(function(){
+			$(".notification_time_sms").css({'background-color': '#fff'});
+			$("#Sat9Sms_box").css({'background-color': color1});
+		});
+
+		$("#Sat_16_sms").click(function(){
+			$(".notification_time_sms").css({'background-color': '#fff'});
+			$("#Sat16Sms_box").css({'background-color': color1});
+		});
+		// Payment type color change
+		$("#monthly_payment").click(function(){
+			$(".payment_type").css({'background-color': '#fff'});
+			$("#monthlyPayment_box").css({'background-color': color1});
+		});
+
+		$("#yearly_payment").click(function(){
+			$(".payment_type").css({'background-color': '#fff'});
+			$("#yearlyPayment_box").css({'background-color': color1});
 		});
 
 		var	$window = $(window),
