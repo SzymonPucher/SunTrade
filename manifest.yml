@@ -1,0 +1,5 @@
+---
+applications:
+ - name: SunTrade
+   random-route: true
+   memory: 256M
