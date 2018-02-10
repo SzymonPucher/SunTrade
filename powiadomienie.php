@@ -51,7 +51,6 @@
 
                     <form id="sms_form">
 
-
                       <h3>Powiadomienie sms jest płatne.</h3>
 
                       <p>Wybierz typ płatności:<p>
