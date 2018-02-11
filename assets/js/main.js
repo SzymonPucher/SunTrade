@@ -96,10 +96,7 @@
 			$("#yearlyPayment_box").css({'background-color': color1});
 		});
 
-		$("#find_shop").click(function(){
-			$("#shop_list").html("Nie znaleziono otwartych sklepów w miejscowości " + $("#find_shop_city").val());
-
-		});
+		
 
 		var	$window = $(window),
 			$body = $('body');
