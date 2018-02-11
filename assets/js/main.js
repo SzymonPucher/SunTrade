@@ -25,7 +25,8 @@
 	$(function() {
 		$("#sms_form").hide();
 		$("#sms_form_disabled").hide();
-		$("#email_form").hide();
+		//$("#email_form").hide();
+		$("#email_choice").css({'background-color': color1});
 
 		$("#email_choice").click(function(){
 			$("#sms_choice").css({'background-color': '#fff'});
@@ -42,6 +43,9 @@
 			$("#sms_form_disabled").show();
 		});
 		// Email notification time color change
+
+		$("#Sat9Email_box").css({'background-color': color1});
+
 		$("#Fri_9_email").click(function(){
 			$(".notification_time_email").css({'background-color': '#fff'});
 			$("#Fri9Email_box").css({'background-color': color1});

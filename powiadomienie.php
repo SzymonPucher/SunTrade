@@ -19,10 +19,70 @@
                       <h2>Ustaw powiadomienie</h2>
                     </header>
 
+
+
+                    <?php
+                    if(isset($_POST['submit'])){
+
+                      $list = [];
+                      if (($handle = fopen("data/emails.csv", "r")) !== FALSE) {
+                          while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                              array_push($list,$data);
+                          }
+                          fclose($handle);
+                      }
+
+                      if($_POST['email'] ==''){
+                        $error[] = 'Email jest wymagany';
+                      }
+
+                      foreach ($list as $field){
+                        if($field[0] == $_POST['email'] && $field[1] == $_POST['daytime']){
+                          $error[] = 'Na ten email o tej godzinie jest już ustawione powiadomienie.';
+                        }
+                      }
+
+                      if(isset($error)){
+                          foreach($error as $error){
+                              echo "<p style='color:#ff0000; text-align: center;'>$error</p><br />";
+                          }
+                      }
+                      else {
+
+                        $email = $_POST['email'];
+                        $daytime = $_POST['daytime'];
+
+                        array_push($list,array($email,$daytime));
+
+                        $fp = fopen('data/emails.csv', 'w');
+                        foreach ($list as $fields) {
+                            fputcsv($fp, $fields);
+                        }
+                        fclose($fp);
+
+                        if(substr($daytime, -1) == "9"){
+                          $time = "9:00";
+                        }
+                        else {
+                          $time = "16:00";
+                        }
+
+                        if($daytime[0] == "F"){
+                          $day = "piątek";
+                        }
+                        else {
+                          $day = "sobotę";
+                        }
+                        
+                        echo "<p style='text-align: center;'>Ustawiono powiadomienie dla <b>".$email."</b> w <b>".$day."</b> o godzinie <b>".$time."</b></p><br />";
+                        }
+                      }
+                    ?>
+
                     <div class="notification_type" id="email_choice">Powiadomienie E-mail</div>
                     <div class="notification_type" id="sms_choice">Powiadomienie SMS</div>
 
-                    <form id="email_form">
+                    <form id="email_form" method="post">
                       <h3>Powiadomienie e-mail jest bezpłatne.</h3>
                       <p>Adres e-mail:</p>
                      <input type="email" name="email" placeholder="Podaj adres e-mail">
@@ -31,22 +91,22 @@
 
                        <div class="notification_time notification_time_email" id="Fri9Email_box">
                          <label for="Fri_9_email">Piątek 9:00</label>
-                         <input type="radio" name="daytime" id="Fri_9_email" value="Fri_9_email" hidden>
+                         <input type="radio" name="daytime" id="Fri_9_email" value="F9" hidden>
                        </div>
 
                        <div class="notification_time notification_time_email" id="Fri16Email_box">
                          <label for="Fri_16_email">Piątek 16:00</label>
-                         <input type="radio" name="daytime" id="Fri_16_email" value="Fri_16_email" hidden>
+                         <input type="radio" name="daytime" id="Fri_16_email" value="F16" hidden>
                        </div>
                        <div class="notification_time notification_time_email" id="Sat9Email_box">
                          <label for="Sat_9_email">Sobota 9:00</label>
-                         <input type="radio" name="daytime" id="Sat_9_email" value="Sat_9_email" hidden>
+                         <input type="radio" name="daytime" id="Sat_9_email" value="S9" hidden checked>
                        </div>
                        <div class="notification_time notification_time_email" id="Sat16Email_box">
                          <label for="Sat_16_email">Sobota 16:00</label>
-                         <input type="radio" name="daytime" id="Sat_16_email" value="Sat_16_email" hidden>
+                         <input type="radio" name="daytime" id="Sat_16_email" value="S16" hidden>
                        </div>
-                     <button class="all_notification" type="submit" onclick="alert('Ustawiono powiadomienie!')">Ustaw powiadomienie</button>
+                     <button type="submit" name="submit" value="submit" >Ustaw powiadomienie</button>
                     </form>
                     <!--
                     <form id="sms_form">
