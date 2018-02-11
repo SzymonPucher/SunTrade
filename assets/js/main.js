@@ -24,12 +24,14 @@
 
 	$(function() {
 		$("#sms_form").hide();
+		$("#sms_form_disabled").hide();
 		$("#email_form").hide();
 
 		$("#email_choice").click(function(){
 			$("#sms_choice").css({'background-color': '#fff'});
 			$(this).css({'background-color': color1});
 			$("#sms_form").hide();
+			$("#sms_form_disabled").hide();
 			$("#email_form").show();
 		});
 
@@ -37,7 +39,7 @@
 			$("#email_choice").css({'background-color': '#fff'});
 			$(this).css({'background-color': color1});
 			$("#email_form").hide();
-			$("#sms_form").show();
+			$("#sms_form_disabled").show();
 		});
 		// Email notification time color change
 		$("#Fri_9_email").click(function(){
@@ -88,6 +90,11 @@
 		$("#yearly_payment").click(function(){
 			$(".payment_type").css({'background-color': '#fff'});
 			$("#yearlyPayment_box").css({'background-color': color1});
+		});
+
+		$("#find_shop").click(function(){
+			$("#shop_list").html("Nie znaleziono otwartych sklepów w miejscowości " + $("#find_shop_city").val());
+
 		});
 
 		var	$window = $(window),
