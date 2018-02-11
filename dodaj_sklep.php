@@ -30,6 +30,7 @@
                       <input type="text" name="town" placeholder="Podaj nazwę miasta">
                       <button type="submit" onclick="alert('Dodano sklep do bazy!')">Dodaj sklep</button>
                     </form>
+                    
 
                   </article>
               </div>

@@ -25,9 +25,9 @@
 												<section>
 														<h2>Znajdź sklep</h2>
 														<p>Podaj miasto</p>
-														<input type="text" name="city">
+														<input type="text" name="city" id="find_shop_city">
 													<footer>
-														<a class="button">szukaj</a>
+														<a class="button" id="find_shop">szukaj</a>
 													</footer>
 												</section>
 
@@ -35,7 +35,7 @@
 														<h2>Mam sklep</h2>
 														Twój sklep jest otwarty w niedzielę wolną od handlu?
 													<footer>
-														<a href="dodaj_sklep.php" class="button">Dodaj twój sklep.</a>
+														<a href="dodaj_sklep.php" class="button">Dodaj twój sklep</a>
 													</footer>
 												</section>
 
@@ -48,7 +48,7 @@
 													<header class="major">
 														<h2>Otwarte sklepy w okolicy</h2>
 													</header>
-													<h4>Nie znaleziono sklepów w twojej okolicy.</h4>
+													<h4 id="shop_list"></h4>
 										</div>
 									</div>
 								</div>

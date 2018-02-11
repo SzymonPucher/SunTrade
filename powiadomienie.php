@@ -48,7 +48,7 @@
                        </div>
                      <button class="all_notification" type="submit" onclick="alert('Ustawiono powiadomienie!')">Ustaw powiadomienie</button>
                     </form>
-
+                    <!--
                     <form id="sms_form">
 
                       <h3>Powiadomienie sms jest płatne.</h3>
@@ -92,6 +92,12 @@
                      <button type="submit" onclick="alert('Ustawiono powiadomienie sms!')">Ustaw powiadomienie</button>
 
                     </form>
+                    -->
+                    <div id="sms_form_disabled" style="text-align: center;">
+                      <h3>Funkcja powiadomień sms jest teraz nieaktywna</h3>
+                      <h5>Spróbuj ponownie później</h5>
+                    </div>
+
                   </article>
               </div>
             </div>
