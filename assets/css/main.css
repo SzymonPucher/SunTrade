@@ -40,7 +40,6 @@
 	}
 
 	table {
-		border-collapse: collapse;
 		border-spacing: 0;
 	}
 
@@ -1385,6 +1384,17 @@
 
 	table {
 		width: 100%;
+		border: solid 3px #777;
+	}
+	th, td {
+    border: solid 1px #222;
+		color: #333;
+	}
+
+	tr:first-child{
+		color: black;
+		text-transform: uppercase;
+		font-weight: 800;
 	}
 
 		table.default {
@@ -1392,11 +1402,12 @@
 		}
 
 			table.default tr {
-				border-top: solid 1px #eee;
+				border-top: solid 1px #222;
 			}
 
 				table.default tr:first-child {
 					border-top: 0;
+					color: black;
 				}
 
 			table.default td {
