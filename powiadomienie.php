@@ -73,7 +73,7 @@
                         else {
                           $day = "sobotę";
                         }
-                        
+
                         echo "<p style='text-align: center;'>Ustawiono powiadomienie dla <b>".$email."</b> w <b>".$day."</b> o godzinie <b>".$time."</b></p><br />";
                         }
                       }
@@ -106,7 +106,7 @@
                          <label for="Sat_16_email">Sobota 16:00</label>
                          <input type="radio" name="daytime" id="Sat_16_email" value="S16" hidden>
                        </div>
-                     <button type="submit" name="submit" value="submit" >Ustaw powiadomienie</button>
+                     <button type="submit" name="submit" value="submit">Ustaw powiadomienie</button>
                     </form>
                     <!--
                     <form id="sms_form">
