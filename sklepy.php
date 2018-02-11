@@ -18,17 +18,21 @@
 							<div class="container">
 								<div class="row">
 									<div class="4u 12u(mobile)">
-										<div id="sidebar">
+										<div id="sidebar" style="text-align: center;">
 
 											<!-- Sidebar -->
 
 												<section>
-														<h2>Znajdź sklep</h2>
-														<p>Podaj miasto</p>
-														<input type="text" name="city" id="find_shop_city">
-													<footer>
-														<a class="button" id="find_shop">szukaj</a>
-													</footer>
+													<h2>Znajdź sklep</h2>
+													<?php
+
+													echo '
+													<form method="post">
+
+			                      <p>Podaj miasto:</p>
+			                      <input type="text" name="town" placeholder="Miasto">
+			                      <button type="submit" name="submit" value="submit">Szukaj</button>
+			                    </form>
 												</section>
 
 												<section>
@@ -49,6 +53,40 @@
 														<h2>Otwarte sklepy w okolicy</h2>
 													</header>
 													<h4 id="shop_list"></h4>
+
+													';
+
+													if(isset($_POST['submit'])){
+			                      $table = "<table style='text-align: center;'><tr><th>Nazwa sklepu</th><th>Godziny otwarcia</th><th>Adres</th></tr>";
+			                      $list = [];
+			                      if (($handle = fopen("data/shops.csv", "r")) !== FALSE) {
+			                          while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+			                              array_push($list,$data);
+			                          }
+			                          fclose($handle);
+			                      }
+
+
+			                        $town = $_POST['town'];
+															$num_of_records = 0;
+			                        foreach ($list as $field) {
+			                          if($town == $field[4]){
+			                            $num_of_records++;
+			                            $table = $table."<tr><td>".$field[0]."</td><td>".$field[1]." - ".$field[2]."</td><td>".$field[3].", ".$field[4]."</td></tr>";
+			                          }
+			                        }
+															if($num_of_records > 0)
+			                        	echo $table."</table>";
+															elseif($town != "") {
+																echo "<h5>Nie znaleziono otwartych sklepów w miejscowości ".$town."</h5>";
+															}
+															else{
+																echo "";
+															}
+
+			                    }
+
+			                    ?>
 										</div>
 									</div>
 								</div>
