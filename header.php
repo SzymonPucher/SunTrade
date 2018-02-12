@@ -21,5 +21,7 @@
 		  gtag('config', 'UA-113954044-1');
 		</script>
 
+		<script type="text/javascript" src="whcookies.js"></script>
+
 
 	</head>
