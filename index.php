@@ -14,20 +14,21 @@
 							$day =  date("d");
 							$day_of_week = date("D");
 							$month = date("m");
-							$date = date("d.m");
+							$year = date("Y");
+							$date = date("Y-m-d");
 
 							$res = 0;
 							if ($handle) {
 							    while (($line = fgets($handle)) !== false) {
-										list($file_day, $file_month) = explode(".", $line);
-										if((int)$file_day == (int)$day && (int)$file_month == (int)$month){
+										list($file_year,$file_month,$file_day) = explode("-", $line);
+										if((int)$file_day == (int)$day && (int)$file_month == (int)$month && (int)$file_year == (int)$year){
 											$res = 3;
 											break;
 										}
-										for($i = 1; $i < 8; $i++){
-											$date2 = Date("d.m", mktime(0,0,0,(int)$month,(int)$day+$i,2018));
-											list($next_day, $next_month) = explode(".", $date2);
-											if((int)$file_day == (int)$next_day && (int)$file_month == (int)$next_month){
+										for($i = 1; $i < 7; $i++){
+											$date2 = Date("Y-m-d", mktime(0,0,0,(int)$month,(int)$day+$i,$year));
+											list($next_year,$next_month,$next_day) = explode("-", $date2);
+											if((int)$file_day == (int)$next_day && (int)$file_month == (int)$next_month && (int)$file_year == (int)$next_year){
 												$res = 1;
 												break;
 											}
