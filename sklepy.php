@@ -65,12 +65,12 @@
 			                          }
 			                          fclose($handle);
 			                      }
-
+														unset($list[0]);
 
 			                        $town = $_POST['town'];
 															$num_of_records = 0;
 			                        foreach ($list as $field) {
-			                          if($town == $field[4]){
+			                          if($town == $field[4] || $town == "all"){
 			                            $num_of_records++;
 			                            $table = $table."<tr><td>".$field[0]."</td><td>".$field[1]." - ".$field[2]."</td><td>".$field[3].", ".$field[4]."</td></tr>";
 			                          }
