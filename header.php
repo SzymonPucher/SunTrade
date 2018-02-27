@@ -4,11 +4,13 @@
 	<head>
 		<title>Handlowa Niedziela</title>
 
-		<meta name="description" content="Wiesz czy zrobisz zakupy w Niedzielę">
+		<meta name="description" content="Handlowa Niedziela i juz wiesz czy zrobisz zakupy">
 		<meta name="keywords" content="handlowa niedziela, zakupy w niedzielę, kupowanie w niedzielę, na zakupy w niedzielę, kiedy wolna niedziela">
-
-		<meta charset="utf-8" />
+  	<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta name="google-site-verification" content="5iap91P717bcCrbLl7XLYIQ2ZuHCGNsuuyVpE8cHWD8" />
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
