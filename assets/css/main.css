@@ -1798,6 +1798,17 @@
 /* Wrappers */
 
 	#header-wrapper {
+		background-color: #444;
+		background-position: top left, center center;
+		background-size: auto, cover;
+	}
+
+	#header-wrapper2 {
+		background: url("images/bg01.png"), url("../../images/closed1.jpg");
+		background-position: top left, center center;
+		background-size: auto, cover;
+	}
+	#header-wrapper3 {
 		background: url("images/bg01.png"), url("../../images/open1.jpg");
 		background-position: top left, center center;
 		background-size: auto, cover;
@@ -1925,7 +1936,7 @@
 
 		/* Wrappers */
 
-			#header-wrapper {
+			#header-wrapper, #header-wrapper2, #header-wrapper3 {
 				padding: 3em 0;
 			}
 
@@ -2083,12 +2094,12 @@
 
 		/* Wrappers */
 
-			#header-wrapper {
+			#header-wrapper, #header-wrapper2, #header-wrapper3 {
 				padding: 2em 0 0 0;
 				height: 11em;
 			}
 
-			body.homepage #header-wrapper {
+			body.homepage #header-wrapper, #header-wrapper2, #header-wrapper3 {
 				height: 36em;
 			}
 
@@ -2394,11 +2405,11 @@
 
 		/* Wrappers */
 
-			#header-wrapper {
+			#header-wrapper, #header-wrapper2, #header-wrapper3 {
 				background-position: 35% 50%;
 			}
 
-			.homepage #header-wrapper,
+			.homepage #header-wrapper, #header-wrapper2, #header-wrapper3,
 			#main-wrapper {
 				padding-top: 44px;
 			}
