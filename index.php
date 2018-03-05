@@ -44,22 +44,22 @@
 								case 1:
 										echo '<div id="header-wrapper2"><div class="container">';
 									include("navigation.php");
-									echo '<div id="banner"><h2>W najbliższą niedzielę sklepy będą<br /><br /><strong>ZAMKNIĘTE</strong></h2>';
+									echo '<div id="banner"><h2>W najbliższą niedzielę sklepy będą<pre><br /><strong>ZAMKNIĘTE</strong></pre></h2>';
 									break;
 								case 2:
 									echo '<div id="header-wrapper3"><div class="container">';
 									include("navigation.php");
-									echo '<div id="banner"><h2>W najbliższą niedzielę sklepy będą<br /><br /><strong>OTWARTE</strong></h2>';
+									echo '<div id="banner"><h2>W najbliższą niedzielę sklepy będą<pre><br /><strong>OTWARTE</strong></pre></h2>';
 									break;
 								case 3:
 									echo '<div id="header-wrapper2"><div class="container">';
 									include("navigation.php");
-									echo '<div id="banner"><h2>Dziś sklepy są<br /><br /><strong>ZAMKNIĘTE</strong></h2>';
+									echo '<div id="banner"><h2>Dziś sklepy są<pre><br /><strong>ZAMKNIĘTE</strong></pre></h2>';
 									break;
 								case 4:
 									echo '<div id="header-wrapper3"><div class="container">';
 									include("navigation.php");
-									echo '<div id="banner"><h2>Dziś sklepy są<br /><br /><strong>OTWARTE</strong></h2>';
+									echo '<div id="banner"><h2>Dziś sklepy są<pre><br /><strong>OTWARTE</strong></pre></h2>';
 									break;
 								default:
 									echo '<div id="header-wrapper3"><div class="container">';
